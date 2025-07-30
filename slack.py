@@ -301,7 +301,7 @@ if __name__ == "__main__":
         "ci": args.ci.upper(),
         "product_config": get_product_config(product_name=args.product.upper()),
     }
-
+    print('kwargs' + str(kwargs))
     fetcher = SlackMessageFetcher(
         channel_id=SLACK_CHANNEL_ID, logger=logger, poll_interval=SLACK_POLL_INTERVAL
     )

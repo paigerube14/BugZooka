@@ -309,6 +309,9 @@ if __name__ == "__main__":
         "--ci", type=str, default=os.environ.get("CI"), help="CI system name"
     )
     parser.add_argument(
+        "--build-logs", type=str, default=os.environ.get("BUILD_LOGS"), help="Build logs for job comparison"
+    )
+    parser.add_argument(
         "--log-level",
         type=str,
         choices=VALID_LOG_LEVELS,
